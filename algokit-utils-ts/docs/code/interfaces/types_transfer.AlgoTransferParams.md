@@ -4,7 +4,11 @@
 
 [types/transfer](../modules/types_transfer.md).AlgoTransferParams
 
-The sending configuration for a transaction
+Parameters for
+
+**`See`**
+
+transferAlgos call.
 
 ## Hierarchy
 
@@ -38,7 +42,7 @@ The amount to send
 
 #### Defined in
 
-[types/transfer.ts:11](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/transfer.ts#L11)
+[types/transfer.ts:12](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/transfer.ts#L12)
 
 ___
 
@@ -66,7 +70,7 @@ The account (with private key loaded) that will send the µALGOs
 
 #### Defined in
 
-[types/transfer.ts:7](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/transfer.ts#L7)
+[types/transfer.ts:8](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/transfer.ts#L8)
 
 ___
 
@@ -110,7 +114,7 @@ The (optional) transaction note
 
 #### Defined in
 
-[types/transfer.ts:15](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/transfer.ts#L15)
+[types/transfer.ts:16](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/transfer.ts#L16)
 
 ___
 
@@ -171,7 +175,7 @@ The account address that will receive the ALGOs
 
 #### Defined in
 
-[types/transfer.ts:9](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/transfer.ts#L9)
+[types/transfer.ts:10](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/transfer.ts#L10)
 
 ___
 
@@ -183,4 +187,4 @@ Optional transaction parameters
 
 #### Defined in
 
-[types/transfer.ts:13](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/transfer.ts#L13)
+[types/transfer.ts:14](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/transfer.ts#L14)
