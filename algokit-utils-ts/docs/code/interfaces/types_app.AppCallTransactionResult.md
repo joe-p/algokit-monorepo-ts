@@ -8,9 +8,7 @@ Result from calling an app
 
 ## Hierarchy
 
-- [`SendTransactionResults`](types_transaction.SendTransactionResults.md)
-
-- [`SendTransactionResult`](types_transaction.SendTransactionResult.md)
+- [`AppCallTransactionResultOfType`](types_app.AppCallTransactionResultOfType.md)<[`ABIReturn`](../modules/types_app.md#abireturn)\>
 
   ↳ **`AppCallTransactionResult`**
 
@@ -34,7 +32,7 @@ The response if the transaction was sent and waited for
 
 #### Inherited from
 
-[SendTransactionResult](types_transaction.SendTransactionResult.md).[confirmation](types_transaction.SendTransactionResult.md#confirmation)
+[AppCallTransactionResultOfType](types_app.AppCallTransactionResultOfType.md).[confirmation](types_app.AppCallTransactionResultOfType.md#confirmation)
 
 #### Defined in
 
@@ -51,7 +49,7 @@ the index of the confirmation will match the index of the underlying transaction
 
 #### Inherited from
 
-[SendTransactionResults](types_transaction.SendTransactionResults.md).[confirmations](types_transaction.SendTransactionResults.md#confirmations)
+[AppCallTransactionResultOfType](types_app.AppCallTransactionResultOfType.md).[confirmations](types_app.AppCallTransactionResultOfType.md#confirmations)
 
 #### Defined in
 
@@ -65,9 +63,13 @@ ___
 
 If an ABI method was called the processed return value
 
+#### Inherited from
+
+[AppCallTransactionResultOfType](types_app.AppCallTransactionResultOfType.md).[return](types_app.AppCallTransactionResultOfType.md#return)
+
 #### Defined in
 
-[src/types/app.ts:182](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/app.ts#L182)
+[src/types/app.ts:181](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/app.ts#L181)
 
 ___
 
@@ -79,7 +81,7 @@ The transaction
 
 #### Inherited from
 
-[SendTransactionResult](types_transaction.SendTransactionResult.md).[transaction](types_transaction.SendTransactionResult.md#transaction)
+[AppCallTransactionResultOfType](types_app.AppCallTransactionResultOfType.md).[transaction](types_app.AppCallTransactionResultOfType.md#transaction)
 
 #### Defined in
 
@@ -95,7 +97,7 @@ The transactions that have been prepared and/or sent
 
 #### Inherited from
 
-[SendTransactionResults](types_transaction.SendTransactionResults.md).[transactions](types_transaction.SendTransactionResults.md#transactions)
+[AppCallTransactionResultOfType](types_app.AppCallTransactionResultOfType.md).[transactions](types_app.AppCallTransactionResultOfType.md#transactions)
 
 #### Defined in
 
