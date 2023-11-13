@@ -20,6 +20,7 @@ Parameters for `transferAlgos` call.
 - [atc](types_transfer.AlgoTransferParams.md#atc)
 - [fee](types_transfer.AlgoTransferParams.md#fee)
 - [from](types_transfer.AlgoTransferParams.md#from)
+- [lease](types_transfer.AlgoTransferParams.md#lease)
 - [maxFee](types_transfer.AlgoTransferParams.md#maxfee)
 - [maxRoundsToWaitForConfirmation](types_transfer.AlgoTransferParams.md#maxroundstowaitforconfirmation)
 - [note](types_transfer.AlgoTransferParams.md#note)
@@ -84,6 +85,18 @@ The account that will send the ALGOs
 #### Defined in
 
 [src/types/transfer.ts:9](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/transfer.ts#L9)
+
+___
+
+### lease
+
+• `Optional` **lease**: `string` \| `Uint8Array`
+
+An (optional) [transaction lease](https://developer.algorand.org/articles/leased-transactions-securing-advanced-smart-contract-design/) to apply
+
+#### Defined in
+
+[src/types/transfer.ts:19](https://github.com/algorandfoundation/algokit-utils-ts/blob/main/src/types/transfer.ts#L19)
 
 ___
 
