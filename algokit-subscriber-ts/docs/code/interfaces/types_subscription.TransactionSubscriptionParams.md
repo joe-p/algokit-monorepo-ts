@@ -6,12 +6,19 @@
 
 Parameters to control a single subscription pull/poll.
 
+## Hierarchy
+
+- [`CoreTransactionSubscriptionParams`](types_subscription.CoreTransactionSubscriptionParams.md)
+
+  ↳ **`TransactionSubscriptionParams`**
+
 ## Table of contents
 
 ### Properties
 
 - [arc28Events](types_subscription.TransactionSubscriptionParams.md#arc28events)
-- [filter](types_subscription.TransactionSubscriptionParams.md#filter)
+- [filters](types_subscription.TransactionSubscriptionParams.md#filters)
+- [maxIndexerRoundsToSync](types_subscription.TransactionSubscriptionParams.md#maxindexerroundstosync)
 - [maxRoundsToSync](types_subscription.TransactionSubscriptionParams.md#maxroundstosync)
 - [syncBehaviour](types_subscription.TransactionSubscriptionParams.md#syncbehaviour)
 - [watermark](types_subscription.TransactionSubscriptionParams.md#watermark)
@@ -20,41 +27,97 @@ Parameters to control a single subscription pull/poll.
 
 ### arc28Events
 
-• `Optional` **arc28Events**: [`Arc28EventGroup`](types_subscription.Arc28EventGroup.md)[]
+• `Optional` **arc28Events**: [`Arc28EventGroup`](types_arc_28.Arc28EventGroup.md)[]
 
 Any ARC-28 event definitions to process from app call logs
 
+#### Inherited from
+
+[CoreTransactionSubscriptionParams](types_subscription.CoreTransactionSubscriptionParams.md).[arc28Events](types_subscription.CoreTransactionSubscriptionParams.md#arc28events)
+
 #### Defined in
 
-[types/subscription.ts:82](https://github.com/algorandfoundation/algokit-subscriber-ts/blob/main/src/types/subscription.ts#L82)
+[types/subscription.ts:77](https://github.com/algorandfoundation/algokit-subscriber-ts/blob/main/src/types/subscription.ts#L77)
 
 ___
 
-### filter
+### filters
 
-• **filter**: [`TransactionFilter`](types_subscription.TransactionFilter.md)
+• **filters**: [`NamedTransactionFilter`](types_subscription.NamedTransactionFilter.md)[]
 
-The filter to apply to find transactions of interest.
+The filter(s) to apply to find transactions of interest.
+A list of filters with corresponding names.
+
+**`Example`**
+
+```typescript
+ filter: [{
+  name: 'asset-transfers',
+  filter: {
+    type: TransactionType.axfer,
+    //...
+  }
+ }, {
+  name: 'payments',
+  filter: {
+    type: TransactionType.pay,
+    //...
+  }
+ }]
+```
+
+#### Inherited from
+
+[CoreTransactionSubscriptionParams](types_subscription.CoreTransactionSubscriptionParams.md).[filters](types_subscription.CoreTransactionSubscriptionParams.md#filters)
 
 #### Defined in
 
-[types/subscription.ts:80](https://github.com/algorandfoundation/algokit-subscriber-ts/blob/main/src/types/subscription.ts#L80)
+[types/subscription.ts:75](https://github.com/algorandfoundation/algokit-subscriber-ts/blob/main/src/types/subscription.ts#L75)
+
+___
+
+### maxIndexerRoundsToSync
+
+• `Optional` **maxIndexerRoundsToSync**: `number`
+
+The maximum number of rounds to sync from indexer when using `syncBehaviour: 'catchup-with-indexer'.
+
+By default there is no limit and it will paginate through all of the rounds.
+Sometimes this can result in an incredibly long catchup time that may break the service
+due to execution and memory constraints, particularly for filters that result in a large number of transactions.
+
+Instead, this allows indexer catchup to be split into multiple polls, each with a transactionally consistent
+boundary based on the number of rounds specified here.
+
+#### Inherited from
+
+[CoreTransactionSubscriptionParams](types_subscription.CoreTransactionSubscriptionParams.md).[maxIndexerRoundsToSync](types_subscription.CoreTransactionSubscriptionParams.md#maxindexerroundstosync)
+
+#### Defined in
+
+[types/subscription.ts:97](https://github.com/algorandfoundation/algokit-subscriber-ts/blob/main/src/types/subscription.ts#L97)
 
 ___
 
 ### maxRoundsToSync
 
-• **maxRoundsToSync**: `number`
+• `Optional` **maxRoundsToSync**: `number`
 
-The maximum number of rounds to sync for each subscription pull/poll.
+The maximum number of rounds to sync from algod for each subscription pull/poll.
+
+Defaults to 500.
 
 This gives you control over how many rounds you wait for at a time,
 your staleness tolerance when using `skip-sync-newest` or `fail`, and
 your catchup speed when using `sync-oldest`.
 
+#### Inherited from
+
+[CoreTransactionSubscriptionParams](types_subscription.CoreTransactionSubscriptionParams.md).[maxRoundsToSync](types_subscription.CoreTransactionSubscriptionParams.md#maxroundstosync)
+
 #### Defined in
 
-[types/subscription.ts:100](https://github.com/algorandfoundation/algokit-subscriber-ts/blob/main/src/types/subscription.ts#L100)
+[types/subscription.ts:86](https://github.com/algorandfoundation/algokit-subscriber-ts/blob/main/src/types/subscription.ts#L86)
 
 ___
 
@@ -79,9 +142,13 @@ past `watermark` then how should that be handled:
    use algod from there.
  * `fail`: Throw an error.
 
+#### Inherited from
+
+[CoreTransactionSubscriptionParams](types_subscription.CoreTransactionSubscriptionParams.md).[syncBehaviour](types_subscription.CoreTransactionSubscriptionParams.md#syncbehaviour)
+
 #### Defined in
 
-[types/subscription.ts:118](https://github.com/algorandfoundation/algokit-subscriber-ts/blob/main/src/types/subscription.ts#L118)
+[types/subscription.ts:115](https://github.com/algorandfoundation/algokit-subscriber-ts/blob/main/src/types/subscription.ts#L115)
 
 ___
 
@@ -101,4 +168,4 @@ will be slow if `onMaxRounds` is `sync-oldest`.
 
 #### Defined in
 
-[types/subscription.ts:93](https://github.com/algorandfoundation/algokit-subscriber-ts/blob/main/src/types/subscription.ts#L93)
+[types/subscription.ts:177](https://github.com/algorandfoundation/algokit-subscriber-ts/blob/main/src/types/subscription.ts#L177)
