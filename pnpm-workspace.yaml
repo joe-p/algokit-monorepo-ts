@@ -84,7 +84,7 @@ catalog:
   json-schema-to-typescript: ^15.0.4
   jsonschema: ^1.5.0
   magic-string: ^0.30.11
-  npm-run-all2: ^8.0.4
+  npm-run-all2: ^9.0.3
   prettier: ^3.9.9
   prisma: ^5.15.1
   remark-github-alerts: ^0.1.1
