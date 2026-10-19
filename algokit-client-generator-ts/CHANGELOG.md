@@ -1,3 +1,9 @@
+# 6.1.0-beta.2 - October 19th, 2026
+
+## Fixes
+
+- Restore the client generator's published TypeScript declarations when building with TypeScript 6.
+
 # 6.1.0-beta.1 - October 14th, 2026
 
 ## Features
