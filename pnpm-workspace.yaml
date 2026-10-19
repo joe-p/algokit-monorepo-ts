@@ -107,6 +107,6 @@ catalog:
   typescript-eslint: ^8.71.1
   unist-util-visit: ^5.1.0
   uuid: ^14.0.0
-  vitest: ^4.1.11
+  vitest: ^5.0.4
   vitest-fetch-mock: ^0.4.5
   yaml: ^2.9.1
