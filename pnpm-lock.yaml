@@ -265,8 +265,8 @@ catalogs:
       specifier: ^0.9.0
       version: 0.9.0
     json-schema-to-typescript:
-      specifier: ^15.0.4
-      version: 15.0.4
+      specifier: ^16.0.0
+      version: 16.0.0
     jsonschema:
       specifier: ^1.5.0
       version: 1.5.0
@@ -398,7 +398,7 @@ importers:
         version: 0.5.1
       json-schema-to-typescript:
         specifier: 'catalog:'
-        version: 15.0.4
+        version: 16.0.0
       npm-run-all2:
         specifier: 'catalog:'
         version: 8.0.4
@@ -2715,8 +2715,8 @@ packages:
     resolution: {integrity: sha512-lR4MXjGNgkJc7tkQ97kb2nuEMnNCyU//XYVH0MKTGcXEiSudQ5MKGKen3C5QubYy0vmq+JGitUg92uuywGEwIA==}
     engines: {node: ^18.17.0 || >=20.5.0}
 
-  json-schema-to-typescript@15.0.4:
-    resolution: {integrity: sha512-Su9oK8DR4xCmDsLlyvadkXzX6+GGXJpbhwoLtOGArAG61dvbW4YQmSEno2y66ahpIdmLMg6YUf/QHLgiwvkrHQ==}
+  json-schema-to-typescript@16.0.0:
+    resolution: {integrity: sha512-Ah6kK4q6SjlMzWBH1eNOQkdRh5Qhr5T/RCFwfjQqWZA7UDW+N47A8wfyoiN0L884s4L4bAEI54IjIuN3/u0B/A==}
     engines: {node: '>=16.0.0'}
     hasBin: true
 
@@ -6363,12 +6363,11 @@ snapshots:
 
   json-parse-even-better-errors@4.0.0: {}
 
-  json-schema-to-typescript@15.0.4:
+  json-schema-to-typescript@16.0.0:
     dependencies:
       '@apidevtools/json-schema-ref-parser': 11.9.3
       '@types/json-schema': 7.0.15
       '@types/lodash': 4.17.25
-      is-glob: 4.0.3
       js-yaml: 4.3.2
       lodash: 4.18.1
       minimist: 1.2.8
